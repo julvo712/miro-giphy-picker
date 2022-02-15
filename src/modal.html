@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/assets/style.css" />
+    <script src="https://miro.com/app/static/sdk/v2/miro.js"></script>
+    <script>
+    	function submit() {
+    		let textarea = document.getElementById('textAreaMain')
+    	  miro.board.ui.closeModal();
+    	  const stickyNote = miro.board.createStickyNote({
+         	content: textarea.value,
+  			});
+  		};
+    </script>
+  </head>
+  <body>
+<h1 class="h1">Modal Headline</h1>
+
+<div class="grid">
+	<div class="cs1 ce12">
+		<div class="form-group">
+			<label>Textarea</label>
+			<textarea id="textAreaMain" class="textarea" placeholder="Placeholder text" spellcheck="true" rows="4"></textarea>
+		</div>
+	</div>
+	<div class="cs1 ce12">
+		<button class="button button-primary" onClick="submit()">Close</button>
+	</div>
+</div>
+
+</body>
+</html>
